@@ -15,9 +15,7 @@ npm run dev
 
 
 API Endpoints
-GET /: Home endpoint.
 
-GET /blog: Blog endpoint.
 
 GET /products: Get all products.
 
