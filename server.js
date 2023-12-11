@@ -40,7 +40,7 @@ app.put('/products/:id',async(req,res)=>{
         const {id} =req.params;
         const product =await Product.findByIdAndUpdate(id, req.body);
         if(!product){
-            return res.status(404).json({message:`cannot find any product wiht Id ${id}`})
+            return res.status(404).json({message:`cannot find any product with Id ${id}`})
         }
         const updatedProduct =await Product.findById(id)
         res.status(200).json(updatedProduct)
@@ -65,7 +65,7 @@ app.delete('/products/:id',async(req,res)=>{
 
 
 
-mongoose.connect('mongodb+srv://sudhinsuresh9526:jdiSz49tIiS2Skyb@merncluster.qvft02h.mongodb.net/nodecurd')
+mongoose.connect('mongodb+srv://sudhinsuresh9526:password@merncluster.qvft02h.mongodb.net/nodecurd')
 .then(()=>{
     app.listen(3000,()=>{
         console.log(`Server is running on the Port 3000`)
