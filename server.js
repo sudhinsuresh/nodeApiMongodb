@@ -6,13 +6,6 @@ const Product =require('./models/ProductModel')
 
 app.use(express.json())
 
-app.get('/',(req,res)=>{
-    res.send("Api ")
-})
-
-app.get('/blog',(req,res)=>{
-    res.send("Blog")
-})
 app.get('/products', async(req,res)=>{
     try{
         const products =await Product.find({});
